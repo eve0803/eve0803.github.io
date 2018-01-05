@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="郭丽敏在 Github 上的个人博客">
+    <meta name="keyword" content="">
+    <meta name="theme-color" content="#600090">
+    <meta name="msapplication-navbutton-color" content="#600090">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#600090">
+    <link rel="shortcut icon" href="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-person-128.png">
+    <link rel="alternate" type="application/atom+xml" title="Eve" href="/atom.xml">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
+    <title>
+        
+        2017：超越前端的实践思考和探索｜Eve&#39;s blog
+        
+    </title>
+
+    <link rel="canonical" href="http://ami.github.io/2018/01/03/2017：超越前端的实践思考和探索/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/blog-style.css">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="/css/syntax.css">
+</head>
+
+<style>
+
+    header.intro-header {
+        background-image: url('http://oco8bvfr8.qnssl.com/16-8-new-bg.jpg')
+    }
+</style>
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="" class="animated fadeIn">
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top " id="nav-top" data-ispost = "true" data-istags="false
+" data-ishome = "false" >
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand animated pulse" href="/">
+                <span class="brand-logo">
+                    Eve
+                </span>
+                's Blog
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <!-- /.navbar-collapse -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+					
+                    
+                        
+							
+                        <li>
+                            <a href="/Tags/">Tags</a>
+                        </li>
+							
+						
+                    
+					
+					
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+//    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+<!-- Main Content -->
+
+<!--only post-->
+
+
+<img class="wechat-title-img"
+     src="http://oco8bvfr8.qnssl.com/16-8-new-bg.jpg">
+
+
+<style>
+    
+    header.intro-header {
+        background-image: url('http://oco8bvfr8.qnssl.com/16-8-new-bg.jpg')
+    }
+
+    
+</style>
+
+<header class="intro-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
+                <div class="post-heading">
+                    <h1>2017：超越前端的实践思考和探索</h1>
+                    
+                    <span class="meta">
+                         作者 郭丽敏
+                        <span>
+                          日期 2018-01-03
+                         </span>
+                    </span>
+                    <div class="tags text-center">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="post-title-haojen">
+        <span>
+            2017：超越前端的实践思考和探索
+        </span>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <!-- Post Container -->
+            <div class="col-lg-8 col-lg-offset-1 col-sm-9 post-container">
+                <p>软件开发不是一份稳定的工作：每年都会出现一个新的技术，每隔几年都会出现一些新的革命性的技术变革。为了加深对现有一些语言、技术。软件工程的领域深度。也为了在浪潮中保持一定的技术洞见，我们都会学习一些新的技术，使用一些新的技术栈。因此这一篇文章主要介绍一些我对于一些新技术的感受，以及自己一些浅显的拙见。</p>
+<p>本文主要包含以下内容：</p>
+<ul>
+<li>回顾前端：超越交互</li>
+<li>回顾移动开发</li>
+<li>技术投资策略</li>
+<li>物联网</li>
+<li>AI </li>
+<li>区块链和去中心化</li>
+</ul>
+<h3 id="回顾前端：超越交互"><a href="#回顾前端：超越交互" class="headerlink" title="回顾前端：超越交互"></a>回顾前端：超越交互</h3><p>已经 “钦定” 了 React、Angular、Vue 作为未来前端开发的主流趋势。在国内来说，还是以 Vue 为主，Vue好上手，但是不都是所有的用户都是小白 ：）。但是作为一个前端开发人员，你把时间投资在 React 和 Angular 上，在未来你会有更大的赢面。</p>
+<p>Vue、React、Angular等现代前端框架很好地解决了组件化和数据视图解耦问题。</p>
+<p>而对前端来说，新交互永远是花费时间最多的工作，新交互也是前端团队的自然价值和核心竞争力之一。</p>
+<p>可是这一年 AI 的火热，让我开发思考AI带来的一些交互上的变化。现在，我们所指的前端多数是一些 Web、移动端相关的 UI开发，其本质就是与用户交互。诸如这几年火热的虚拟现实、智能音箱，都是一个交互的新入口。</p>
+<p>现在可视化仍然是人类最好的获取数据的方式。可当用户大量的日常工作，被 AI 自动化之后，有些工作就变得有些多余。如看今天的天气，可根据你的习惯由计算机计算出来，你今天穿什么衣服。带不带雨伞，在你出门前提醒你。如 Amazon 设计的 Dash Button，可以让你不需要任何的 UI 就可以购买日常用品。</p>
+<h3 id="回顾移动开发"><a href="#回顾移动开发" class="headerlink" title="回顾移动开发"></a>回顾移动开发</h3><p>今年，我在工作上做的移动开发相关的工作，从weex到基于 vue 与 Cordova 的混合应用或者 Ionic与Cordova的混合应用，从嵌入 WebView 到 React Native， Android 原生应用都开始有所了解，但是还是需要深入研究。但也算是见证了移动应用的不同技术选型，对整个移动端的技术有所了解。</p>
+<p>在最近几年里，原生移动应用开发没有像过去那么火热。一来是，受到混合应用和 React Native 的影响；二来是，移动端的开发技术已经趋于成熟；</p>
+<p>操作系统市场份额</p>
+<p><img src="https://note.youdao.com/yws/public/resource/10cb4c16ff8bc7b6effc79cc8bd4d51b/xmlnote/803CE95FFD184B809341BC89E52FA2D0/5816" alt="操作系统市场份额"></p>
+<p>以 VR、AR 和 AI 的技术趋势来看，移动平台才是未来的重点——除非有更好的平台出现。触手可及的技术，拥有更多的可能性，也拥有更多的数据及美好的未来。</p>
+<h3 id="技术投资策略"><a href="#技术投资策略" class="headerlink" title="技术投资策略"></a>技术投资策略</h3><p>所谓的技术投资是指，在一定时期内向一定的新领域投放时间来学习新技术。</p>
+<p>新的技术每天都在不断地涌现，很多就是黑天鹅一样看不出。并且，一来我们已经习惯了新的轮子的产生，二来我们也没有那么多的精力去关心每一个新技术。可是当有一些技术在不断被提及被应用的时候，你就差不多应该关注、学习、采用了。</p>
+<p>就像我最近看的《灰犀牛》里面说的那样：灰犀牛体型笨重、反应迟缓，你能看见它在远处，却毫不在意，一旦它向你狂奔而来，定会让你猝不及防，直接被扑倒在地。你明明看得见，新的趋势在那里，却固执的不肯去了解。那么，未来你就轻松地进入了中年危机。</p>
+<p>Gartner的技术曲线，根据技术发展周期理论来分析新技术的发展周期曲线（从1995年开始每年均有报告），以便帮助人们判断某种新技术是否采用。其把技术成熟经过5个阶段：</p>
+<ol>
+<li>萌芽期，人们对新技术产品和概念开始感知，并且表现出兴趣；</li>
+<li>过热期，人们一拥而上，纷纷采用这种新技术，讨论这种新技术；</li>
+<li>低谷期，又称幻想破灭期。过度的预期，严峻的现实，往往会把人们心理的一把火浇灭；</li>
+<li>复苏期，又称恢复期。人们开始反思问题，并从实际出发考虑技术的价值。相比之前冷静不少；</li>
+<li>成熟期，又称高原期。该技术已经成为一种平常。</li>
+</ol>
+<p><img src="https://static.leiphone.com/uploads/new/article/740_740/201708/599d727b33909.jpg?imageMogr2/format/jpg/quality/90" alt="Gartner的技术曲线"></p>
+<p>对于个人来说，这个技术曲线就没有那么复杂。</p>
+<h4 id="成为早期投入者"><a href="#成为早期投入者" class="headerlink" title="成为早期投入者"></a>成为早期投入者</h4><p>对于一个技术人员来说，这个流程就比较简单了。通常来说，作为一个初入这个行业几年的 “新人” 来说，我们是没有经验、能力去开扩一个新的领域。这时成为早期投资者，可能就是最早期的选择了。</p>
+<p>在新技术的早期就采用它，是一件相当有风险的事，也可能会有相当大的收益。新技术在早期充满了不确认性，如果你押错了，那么你在这段时间的时间可能就白费了。因此，一般是到一个新的技术、概念出现一段时间后，去填这些相关的坑。</p>
+<h4 id="在光明期前采用"><a href="#在光明期前采用" class="headerlink" title="在光明期前采用"></a>在光明期前采用</h4><p>通常意味着，这个新技术栈还有很多坑。但是，大家都认可它是一个有前途的技术。如在今年被大规模采用的 React Native，因为版权问题BAT都开始大量换坑， 就是一个很好的例子。</p>
+<p>一般来说，经历了一些大公司的踩坑，以及网上的一些踩坑经验，那么就意味着采用它已经没有多少问题了——前提是你自己已经做好了技术储备。这个时候就可以为了今年的 KPI，去说服领导了。我们应该这么做，xx 公司都已经上线了，而且这些 blabla 的优势很明显。</p>
+<h4 id="跟随项目使用"><a href="#跟随项目使用" class="headerlink" title="跟随项目使用"></a>跟随项目使用</h4><p>当一个新技术的采用，已经在市场上达成共识。那么，也不要再采用旧的技术了。</p>
+<p>到了今天，前端的单页面应用已经是 React、Angular、Vue 的天下了。这时要开发一个复杂的前端应用，那么你应该从这些主流的框架中去选择，而不是采用早期、过期（已经不维护）的技术了。除非，你们是一家大公司，有自己的轮子。</p>
+<p>当然，只在该用某技术的时候，才在项目上使用新技术。对于一些简单的页面，jQuery + Bootstrap 还是万能的。为了使用新技术，而在项目上使用，有时候容易造成问题。</p>
+<h3 id="物联网"><a href="#物联网" class="headerlink" title="物联网"></a>物联网</h3><p>在数字化浪潮不断扩张的今天，物联网作为一个底层的技术合集，越来越受关注。但是，这不意味着它会马上火爆起来，只是我们可以看到它在不断地被应用。</p>
+<p>硬件是虚拟世界与现实世界的接口，而物联网则可以让我们真实的、从远程访问世界的各个角落。</p>
+<p>2017 年里，IoT 领域的技术趋势，已经在不断地结合各种时髦的技术,Serverless、Tensorflow、 Docker。</p>
+<p>当一个流行的技术能在 PC 上运行，它也终将在智能手机、Raspberry Pi 这一类小型设备上运行。</p>
+<p>在这上面花时间研究，不一定有收益，但是总觉得自己有什么收获。</p>
+<h3 id="AI"><a href="#AI" class="headerlink" title="AI"></a>AI</h3><p>AI 火热的这一年，让我思考过智能的本质是什么。奥地利作家薛定谔在《生命是什么》首次提出负熵的概念，并认为生命以负熵为生，所以智能也可以被描述为——智能：熵减的能力。</p>
+<p>生物智能和人工智能，生物学习和机器学习是智能实现的两种方式。</p>
+<p>其中人工智能就是人造减熵的能力。由于人类在宇宙中还很年轻，对自然界的智能尚未全面掌握，所以我们对人工智能发展是处在一边增强减熵的能力，一边应用的方式中。</p>
+<p>在GET深度学习的技能中，对于我这种已经远离高等数学的人来说，概念上多看几遍多搜下些文章基本能理解，然后实现最重要的是数据，然而下载个数据都要半天。</p>
+<p>更多的是我抽不到足够的空余时间来学习——我的意思是，足够集中的学习时间。还有一个问题是，没有数据——尽管网上已经有大量的公开数据，但是这些公开数据多数是英语的。这些基于英语语言的数据，会导致出现的算法以英语为主，导致算法本身难以采用，这一类问题最常见于 NLP（自然语言学习）。</p>
+<p>不过好在深度学习的 API，也很容易上手。比如智能音箱，实现一个简单的智能音箱本身并不需要太多的新算法——利用一些现有的公开 API、公开算法，我们可以轻松也用深度学习做一个音箱。但是我们缺乏足够的音频数据，它将会导致我们无法进入下一步。</p>
+<p>这就是为什么 Mozilla 会推出 Common Voice Project 项目的原因，没有足够的财力就不会有足够的数据；同理于，今年阿里在双 11 送的大量 99 元的天猫精灵一样，只有大量的数据才能造出 AI。只能有足够的数据或者财富，才能拥有与之匹配的人工智能。</p>
+<h3 id="区块链和去中心化"><a href="#区块链和去中心化" class="headerlink" title="区块链和去中心化"></a>区块链和去中心化</h3><p>针对区块链，本身看的资料资料并不是很多，只是对这个概念有了一个大致的印象。<br>目前来说区块链技术采用的领域很有限，比如在边缘计算、物联网领域引入，场景也是就有限。</p>
+<p>常规的物联网系统都是中心化的，采集数据、加工数据、存储数据、可视化数据、预测数据，它也不需要担心中间的数据修改。如果以一个传感器采集点，作为一个节点，采用区块链的存储成本过高。如果以一个区域作为结点，它也不需要担心其它结点的数据的修改问题。只当每一个节点自身需要记录变更的时候，那么这个物联网应用才适合采用区块链技术，如物流场景等等。</p>
+<p>又比如，在我们的智能家居系统的每一个控制节点上，都记录每一次控制的变化。如你使用手机控制了台灯的开和关，这个数据就会同步到你的手机上。问题是，控制个灯都需要记录一下的场景，这可能是监狱吧？</p>
+<p>也许它的真正的效用因为自己的理解还太不够深刻，并没有思考到。</p>
+<h3 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h3><p>学习技术采取的策略应该是：</p>
+<ul>
+<li>短期学习未来在工作中将采用的技术</li>
+<li>中期了解一些新的技术知识</li>
+<li>长期接触自己喜欢的技术</li>
+</ul>
+<p>不过，简单的来说，这一年的经验就是：</p>
+<ol>
+<li>持续关注某一领域</li>
+<li>当自己擅长的技术，有一些新的突破，那么就应该去学习它。</li>
+<li>如果一个与自己工作相关的技术是未来的趋势，那么请拥抱它。</li>
+<li>如果有一个新的技术可以影响到自己的生活，不妨去学学它。</li>
+</ol>
+<p>2018，继续成长。</p>
+
+                <hr>
+                
+
+                <ul class="pager">
+                    
+                    
+                </ul>
+
+                
+
+                
+
+
+                <!--加入新的评论系统-->
+                
+            </div>
+
+            <div class="hidden-xs col-sm-3 toc-col">
+                <div class="toc-wrap">
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#回顾前端：超越交互"><span class="toc-text">回顾前端：超越交互</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#回顾移动开发"><span class="toc-text">回顾移动开发</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#技术投资策略"><span class="toc-text">技术投资策略</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#成为早期投入者"><span class="toc-text">成为早期投入者</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#在光明期前采用"><span class="toc-text">在光明期前采用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#跟随项目使用"><span class="toc-text">跟随项目使用</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#物联网"><span class="toc-text">物联网</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#AI"><span class="toc-text">AI</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#区块链和去中心化"><span class="toc-text">区块链和去中心化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#结论"><span class="toc-text">结论</span></a></li></ol>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Sidebar Container -->
+
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5 class="text-center">
+                        <a href="/tags/">FEATURED TAGS</a>
+                    </h5>
+                    <div class="tags">
+                        
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+            </div>
+        </div>
+
+    </div>
+</article>
+
+
+
+
+
+
+
+<!-- Footer -->
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
+                <br>
+                <ul class="list-inline text-center">
+                
+                
+                    <li>
+                        <a target="_blank" href="https://twitter.com/eve0803">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+                
+                    <li>
+                        <a target="_blank" href="https://www.zhihu.com/people/eve0803">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa  fa-stack-1x fa-inverse">知</i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+
+                
+
+                
+                    <li>
+                        <a target="_blank"  href="https://github.com/eve0803">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; Eve 2018
+                    <br>
+                    <span id="busuanzi_container_site_pv" style="font-size: 12px;">PV: <span id="busuanzi_value_site_pv"></span> Times</span>
+                    <br>
+                    Theme by <a href="https://haojen.github.io/">Haojen Ma</a>
+                </p>
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/blog.js"></script>
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("http://ami.github.io/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+<!-- Google Analytics -->
+
+
+
+<!-- Baidu Tongji -->
+
+<script>
+    var _baId = '0e9e6e9d920034b27db5e8343108171e';
+    // Originial
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?" + _baId;
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+<!-- swiftype -->
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install','','2.0.0');
+</script>
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<!--wechat title img-->
+<img class="wechat-title-img" src="http://note.youdao.com/yws/res/5963/AF8DE1BB861E4FC0A7435AE5D5A0E2AD">
+</body>
+
+</html>
