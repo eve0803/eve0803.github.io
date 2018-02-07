@@ -5591,7 +5591,7 @@ body a {
 	color:#555
 }
 body .container-main.color-theme {
-	background-image:url(http://o7bkkhiex.bkt.clouddn.com/firefly.jpg);
+	background-image:url(../images/firefly.jpg);
 	-webkit-transition:background 1.6s;
 	transition:background 1.6s
 }
@@ -5612,7 +5612,7 @@ body .container-main.color-theme .light-circle {
 body .container-main {
 	color:#555;
 	background-size:cover;
-	background-image:url(../images/white.png)
+	background-image:url(../images/firefly.jpg)
 }
 body .container-main header .dropdown-mhz {
 	position:relative
