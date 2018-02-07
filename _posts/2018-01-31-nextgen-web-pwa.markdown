@@ -4,7 +4,7 @@ title:      "《维罗妮卡决定去死》"
 subtitle:   "死亡和活着哪个更需要勇气，思考死亡是否会使我们热爱生命"
 date:       2018-01-31 23:00:00
 author:     "Eve"
-header-img: "img/post-bg-nextgen-web-pwa.jpg"
+header-img: "img/post-bg-2015.jpg"
 header-mask: 0.3
 catalog:    true
 tags:
